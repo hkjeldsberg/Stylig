@@ -14,6 +14,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     val REQUEST_IMAGE_CAPTURE = 1
+    var PICK_IMAGE_REQUEST = 1
+
     lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +26,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openCamera(view: View) {
-        println("Pressed button")
+        println("Opening camera")
         dispatchTakePictureIntent()
+    }
+
+    fun openAlbum(view: View) {
+        println("Opening album")
+        chooseImage()
+    }
+
+    fun chooseImage() {
+        /*
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+        */
+         */
+
+        Intent(Intent.ACTION_GET_CONTENT).also { getContentIntent ->
+            getContentIntent.resolveActivity(packageManager)?.also {
+                startActivityForResult(
+                    Intent.createChooser(intent, "Select Picture"),
+                    PICK_IMAGE_REQUEST
+                )
+            }
+        }
+
     }
 
 

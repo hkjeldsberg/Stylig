@@ -15,11 +15,26 @@
         android:contentDescription="@string/image_description"
         android:src="@drawable/ica" />
 
-    <Button
-        android:id="@+id/open_camera_button"
+    <TableRow
+        android:id="@+id/row1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="openCamera"
-        android:text="@string/camera_button_text" />
+        android:paddingTop="20dp">
 
+        <Button
+            android:id="@+id/open_album_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openAlbum"
+            android:text="@string/open_album_text" />
+
+        <Button
+            android:id="@+id/open_camera_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openCamera"
+            android:text="@string/camera_button_text" />
+
+
+    </TableRow>
 </LinearLayout>
