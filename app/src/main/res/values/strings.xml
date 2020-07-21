@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Stylig</string>
     <string name="camera_button_text">Open Camera</string>
+    <string name="image_description">Image to be style transferred</string>
 </resources>

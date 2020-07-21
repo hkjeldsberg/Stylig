@@ -3,8 +3,8 @@ Style transfer app for Android
 
 ## TODO
 - ~Add button to open camera~
-- Add camera functionality
-- Show picture taken
+- ~Add camera functionality~
+- Display picture taken
 - Add button for style transfer
 - Style transfer functionality
 - Connect to Firebase
